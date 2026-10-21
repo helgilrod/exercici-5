@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Compilar
+      - name: conversor.c
         run: make
       - name: Comprova
         run: ./conversor c2f 100
@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Compilar
+      - name: conversor.c
         run: make
       - name: Comprovar
         run: ./conversor c2f 100
