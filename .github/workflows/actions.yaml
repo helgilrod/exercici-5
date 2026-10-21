@@ -1,0 +1,25 @@
+name: compilar
+on:
+  push:
+    branches: [main]
+jobs:
+  compile-test-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Compilar
+        run: make
+      - name: Comprova
+        run: ./conversor c2f 100
+
+  compile-test-mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Compilar
+        run: make
+      - name: Comprovar
+        run: ./conversor c2f 100
+
+
+
